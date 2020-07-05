@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dp"
+        android:layout_marginLeft="8.0dp"
+        android:layout_marginRight="8.0dp"
+        android:layout_marginTop="4.0dp"
+        card_view:cardCornerRadius="2dp">
+    <LinearLayout android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="80.0dp"
+            />
+
+        <LinearLayout android:id="@+id/layout_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1.8">
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Item Name "
+                    android:textSize="10dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/item_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_name"
+                    android:text="Item descriptions"
+                    android:textSize="10dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Kshs. "/>
+                <TextView
+                    android:id="@+id/item_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/currency"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:text="8,999"
+                    android:textColor="#4CAF50"/>
+
+                    <TextView
+                        android:id="@+id/label_stock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stock:"
+                        android:layout_below="@id/currency"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/stock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/currency"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@id/label_stock"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <ImageView android:id="@+id/ic_wishlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_weight="0.3"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_favourite"/>
+        </LinearLayout>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

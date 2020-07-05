@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4.0dp"
+    android:layout_marginLeft="8.0dp"
+    android:layout_marginRight="8.0dp"
+    android:layout_marginTop="4.0dp"
+    card_view:cardCornerRadius="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="8.5dp"
+        android:layout_marginRight="8.5dp"
+        android:layout_marginTop="8.8dp"
+        android:background="@drawable/white_light_rect"
+        android:layout_marginBottom="8dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.3sp"
+                    android:textColor="#000"
+                    android:text="Samsung Galaxy S9 Plus"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/product_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="good"
+                        android:textSize="13.3sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/product_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 30000"
+                        android:textSize="13.3sp"
+                        android:textColor="@color/purple" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linear_count"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/size_red_rect">
+
+                    <FrameLayout
+                        android:id="@+id/layout_reduceQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_gravity="center"
+                        android:background="#f2f2f2">
+
+
+                        <ImageView
+                            android:id="@+id/minus"
+                            android:layout_width="17dp"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:src="@drawable/ic_minus"
+                            android:layout_gravity="center"/>
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:id="@+id/product_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:paddingLeft="8.7dp"
+                        android:paddingRight="8.7dp"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/purple"/>
+                    <FrameLayout
+                        android:id="@+id/layout_addQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:background="#f2f2f2">
+
+
+                        <ImageView
+                            android:id="@+id/plus"
+                            android:layout_width="17dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_plus"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:layout_gravity="center"/>
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/layout_delete"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_delete"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</LinearLayout>

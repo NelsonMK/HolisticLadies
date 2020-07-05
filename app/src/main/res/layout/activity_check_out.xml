@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckOutActivity">
+
+    <LinearLayout
+        android:id="@+id/linearTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Product"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Quantity"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Price (Kshs)"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/checkOutRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_below="@id/linearTitle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/white_light_rect"
+        android:layout_marginLeft="8.5dp"
+        android:layout_marginRight="8.5dp"
+        android:layout_marginBottom="8.5dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sub Total"
+                android:textSize="12.7sp"
+                android:textColor="#a2a2a2"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <TextView
+                android:id="@+id/subTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_color"
+                android:textSize="12.7sp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Rs 30000"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginRight="8.5dp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Shipping Charge"
+                android:textSize="12.7sp"
+                android:textColor="#a2a2a2"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <TextView
+                android:id="@+id/shippingCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#32CD32"
+                android:textSize="12.7sp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Free"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginRight="8.5dp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textSize="12.7sp"
+                android:textColor="#a2a2a2"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <TextView
+                android:id="@+id/TotalCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_color"
+                android:textSize="12.7sp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Rs 30,000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mpesaCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="MPESA CODE"
+                    android:textSize="12.7sp"
+                    android:textColorHint="#000"
+                    android:textColor="#000"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/checkOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PLACE ORDER"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

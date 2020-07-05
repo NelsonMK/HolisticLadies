@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    android:background="#fff"
+    tools:showIn="@layout/activity_profile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:id="@+id/nameImageView"
+                    android:src="@drawable/ic_name"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:text="Name"
+                    android:layout_toEndOf="@id/nameImageView"
+                style="@style/profileDetailsTextMain" />
+
+                <TextView
+                    android:text="developer"
+                    android:layout_toEndOf="@id/nameImageView"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:id="@+id/mobileImageView"
+                    android:src="@drawable/ic_history"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:id="@+id/orders_history"
+                    android:text="Orders history"
+                    android:layout_toEndOf="@id/mobileImageView"
+                    android:layout_centerVertical="true"
+                    style="@style/profileDetailsTextMain"/>
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:id="@+id/emailImageView"
+                    android:src="@drawable/ic_reply"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:id="@+id/feedback"
+                    android:text="Feedback"
+                    android:layout_toEndOf="@id/emailImageView"
+                    android:layout_centerVertical="true"
+                    style="@style/profileDetailsTextMain" />
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:id="@+id/addressImageView"
+                    android:src="@drawable/ic_menu_share"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:id="@+id/share"
+                    android:text="Share"
+                    android:layout_toEndOf="@id/addressImageView"
+                    android:layout_centerVertical="true"
+                    style="@style/profileDetailsTextMain" />
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+            <RelativeLayout style="@style/profileDetailsLayout">
+                <ImageView
+                    android:id="@+id/dobImageView"
+                    android:src="@drawable/ic_log_out"
+                    style="@style/profileDetailsImage" />
+
+                <TextView
+                    android:id="@+id/log_out"
+                    android:text="Log out"
+                    android:layout_toEndOf="@id/dobImageView"
+                    android:layout_centerVertical="true"
+                    style="@style/profileDetailsTextMain" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
